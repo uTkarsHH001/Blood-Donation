@@ -1,0 +1,138 @@
+                    * {
+                        margin: 0px;
+                        padding: 0px;
+                        font-family: Jura;
+                        box-sizing: border-box;
+                    }
+                    
+                    body {
+                        /* background-color: #D3D4CC; */
+                        position: relative;
+                        background-image: url("../imG/bG.png");
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        height: 100vh;
+                    }
+                    
+                    .navbar {
+                        background-color: black;
+                        opacity: 0.7;
+                        overflow: hidden;
+                        width: 100%;
+                        z-index: 99;
+                        height: 5rem;
+                    }
+                    
+                    .a,
+                    ul a,
+                    li {
+                        text-decoration: none;
+                        color: white;
+                        opacity: 1;
+                    }
+                    
+                    .container ul a:hover,
+                    .active {
+                        color: red;
+                        background-color: white;
+                        border-radius: 6px;
+                    }
+                    
+                    #Homepage {
+                        height: 100vh;
+                    }
+                    
+                    .jumbotron {
+                        font-size: xx-large;
+                        background-color: transparent;
+                    }
+                    
+                    #para {
+                        color: rgb(71, 69, 69);
+                        opacity: 0.8;
+                        margin-top: 3em;
+                    }
+                    
+                    .modal-header {
+                        opacity: 0.9;
+                        border: 2px solid red;
+                    }
+                    
+                    .modal-body {
+                        color: red;
+                        font-size: 20px;
+                    }
+                    
+                    #Homepage .card {
+                        opacity: 0.8;
+                        border: 2px solid rgb(122, 110, 110);
+                        margin-left: 10em;
+                        margin-top: 4em;
+                    }
+                    
+                    .card-body {
+                        color: red;
+                        font-size: 20px;
+                    }
+                    
+                    section {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        height: 100vh;
+                    }
+                    
+                    #Egb .card {
+                        margin-top: 2rem;
+                    }
+                    
+                    #Egb,
+                    #Bf {
+                        background-color: white;
+                    }
+                    
+                    #Egb h2 {
+                        color: red;
+                        font-weight: bolder;
+                        font-size: 50px;
+                    }
+                    
+                    #Egb .card-body ul li,
+                    #bloodfc ul li {
+                        color: grey;
+                        font-size: medium;
+                        font-weight: bolder;
+                    }
+                    
+                    #Egb .card h5 {
+                        color: red;
+                        font-size: medium;
+                        font-weight: bolder;
+                    }
+                    
+                    #bloodfc img {
+                        margin-top: 2rem;
+                    }
+                    
+                    #bloodfc ul {
+                        padding-top: 2rem;
+                        padding-left: 2rem;
+                    }
+                    
+                    footer {
+                        background-color: rgb(233, 128, 128);
+                        color: white;
+                    }
+                    
+                    footer a {
+                        text-decoration: none;
+                        color: rgb(228, 20, 20);
+                        background-color: white;
+                        border-radius: 6px;
+                    }
+                    
+                    footer a:hover {
+                        color: white;
+                        background-color: red;
+                        border-radius: 6px;
+                    }

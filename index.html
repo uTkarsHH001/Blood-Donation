@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>dnbLood</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jura&display=swap" rel="stylesheet">
+
+    <!-- Fontawesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Other CSS -->
+    <link rel="stylesheet" href="./Css/css.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-expand-sm fixed-top" id="primary">
+        <div class="container">
+            <a class="navbar-brand " href="./index.html"><img src="./imG/logo.png " alt="Logo" width="60px"></a>
+            <ul class="nav navbar-nav mr-auto ">
+                <li class="nav-item p-3 "><a id="Hm" href="#Homepage" class="nav-link active"><span class="fa fa-home fa-lg "></span> Home</a></li>
+                <li class="nav-item p-3 "><a id="Eg" href="#Egb" class="nav-link"><span class="fa fa-graduation-cap fa-lg "></span> Eligibility</a></li>
+                <li class="nav-item p-3 "><a href="#bloodfc" class="nav-link "><span class="fa fa-balance-scale-right fa-lg "></span> Blood Facts</a></li>
+                <li class="nav-item p-3 "><a href="#About" class="nav-link "><span class="fa fa-users fa-lg "></span> About Us</a></li>
+            </ul>
+
+            <span><a data-toggle="modal" data-target="#SAD" class="btn btn-secondary py-3"><span class="fa fa-search fa-lg "></span> Search a Donor</a>
+            <span> <a data-toggle="modal" data-target="#SignupModal" class="btn btn-secondary ml-3"><span class="fa fa-tint fa-lg " style="color:rgb(206, 82, 82) "></span> Be a Life <br> &nbsp; &nbsp;Saver</a>
+            </span>
+        </div>
+    </nav>
+    <div id="SignupModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg " role="content">
+            <!-- Modal content-->
+            <div class="modal-content ">
+                <div class="modal-header bg-danger text-white ">
+                    <h4 class="modal-title ">Resgisteration For Donation</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form action="php/user_info.php" method="POST">
+                        <p class="text-center "><strong>We are very glad that you want to signup as donor.</strong></p>
+                        <div class="form-row ">
+                            <div class="form-group col-2 ">
+                                <label for="fullname">Fullname :*</label>
+                            </div>
+                            <div class="form-group col-5">
+                                <input type="text " class="form-control form-control-sm mr-1 " name="firstname" autocomplete="off" placeholder="First Name " required>
+                            </div>
+                            <div class="form-group col-5">
+                                <input type="text " class="form-control form-control-sm mr-1" name="lastname" autocomplete="off" placeholder="Last Name ">
+                            </div>
+                        </div>
+                        <div class="form-row ">
+                            <div class="form-group col-2 ">
+                                <label for="email ">Email :*</label>
+                            </div>
+                            <div class="form-group col-3 ">
+                                <input name="email" placeholder="Email " class="form-control form-control-sm " required>
+                            </div>
+                            <div class="form-group col-2 ml-2 ">
+                                <label for="phoneno ">Phone no :</label>
+                            </div>
+                            <div class="form-group col-3 ">
+                                <input type="number " name="phoneno" placeholder="Phone no." class="form-control form-control-sm ">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-2 ">
+                                <label for="gender ">Gender :*</label>
+                            </div>
+                            <div class="form-group col-3 ">
+                                <select name="gender" class="form-control form-control-sm " required>
+                                                <option selected>Choose..</option>
+                                                <option value="1 ">Male</option>
+                                                <option value="2 ">Female</option>
+                                                <option value="3 ">Others</option>
+                                            </select>
+                            </div>
+                            <div class="form-group col-1 ml-2 ">
+                                <label for="dateofbirth ">DOB :</label>
+                            </div>
+                            <div class="form-group col-3 ">
+                                <input type="date " name="dob" class="form-control form-control-sm ">
+                            </div>
+                        </div>
+                        <div class=" form-row ">
+                            <div class="form-group col-2 ">
+                                <label for="Address "> Address :*</label>
+                            </div>
+                            <div class="form-group col-10 ">
+                                <textarea type="text " rows="4 " name="address" autocomplete="off " class="form-control form-control-sm " placeholder="Your Address Here..... " required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row ">
+                            <div class="form-group col-3 ">
+                                <label for="BloodGroup "> BloodGroup :*</label>
+                            </div>
+                            <div class="form-group col-3 ">
+                                <select name="bloodgroup" class="form-control form-control-sm " required>
+                                                <option selected> Choose..</option>
+                                                <option value="1 ">A+</option>
+                                                <option value="2 ">A-</option>
+                                                <option value="3 ">B+</option>
+                                                <option value="4 ">B-</option>
+                                                <option value="5 ">AB+</option>
+                                                <option value="6 ">AB-</option>
+                                                <option value="7 ">O+</option>
+                                                <option value="8 ">O-</option>
+                                            </select>
+                            </div>
+                            <div class="form-group col-3 ">
+                                <label for="occupation ">Occupation :*</label>
+                            </div>
+                            <div class="form-group col-3 ">
+                                <select name="occupation" class="form-control form-control-sm " required>
+                                                <option selected> Choose..</option>
+                                                <option value="1 ">Studendt</option>
+                                                <option value="2 ">Employee</option>
+                                                <option value="3 ">Unemployee</option>
+                                            </select>
+                            </div>
+                        </div>
+                        <div class="form-row ">
+                            <div class="form-group col-2 ">
+                                <label for="state "> State :*</label>
+                            </div>
+                            <div class="form-group col-3 ">
+                                <input class="form-control form-control-sm mr-1 " autocomplete="off " type="text " name="state" placeholder="State ">
+                            </div>
+                            <div class="form-group col-1 ">
+                                <label for="city "> City* :</label>
+                            </div>
+                            <div class="form-group col-2 ">
+                                <input class="form-control form-control-sm mr-1 " autocomplete="off " type="text " name="city" placeholder="City ">
+                            </div>
+                            <div class="form-group col-1 ">
+                                <label for="zipcode "> ZIP :*</label>
+                            </div>
+                            <div class="form-group col-3 ">
+                                <input class="form-control form-control-sm mr-1 " autocomplete="off " type="number " name="zipcode" placeholder="Zip Code ">
+                            </div>
+                        </div>
+                        <div class="form-row text-center ">
+                            <div class="form-group ">
+                                <button type="submit " class="btn btn-danger btn-sm ml-1 ">Sign up</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="SAD" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg " role="content">
+            <!-- Modal content-->
+            <div class="modal-content ">
+                <div class="modal-header bg-danger text-white ">
+                    <h4 class="modal-title ">Donors</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row ">
+                            <div class="form-group col-3">
+                                <label for="city"> City* :</label>
+                            </div>
+                            <div class="form-group col-3">
+                                <input class="form-control form-control-sm mr-1 " autocomplete="off " type="text " name="city" placeholder="City ">
+                            </div>
+                            <div class="form-group col-3 ">
+                                <label for="BloodGroup "> BloodGroup :*</label>
+                            </div>
+                            <div class="form-group col-3 ">
+                                <select name="bloodgroup" class="form-control form-control-sm " required>
+                                                <option selected> Choose..</option>
+                                                <option value="1 ">A+</option>
+                                                <option value="2 ">A-</option>
+                                                <option value="3 ">B+</option>
+                                                <option value="4 ">B-</option>
+                                                <option value="5 ">AB+</option>
+                                                <option value="6 ">AB-</option>
+                                                <option value="7 ">O+</option>
+                                                <option value="8 ">O-</option>
+                                            </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-row text-center ">
+                            <div class="form-group ">
+                                <button type="submit " class="btn btn-danger btn-sm ml-1 ">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="Homepage">
+        <div class=" jumbotron ">
+            <div class="row ">
+                <div class="col-12 col-lg-4 ">
+                    <p class="text-left " id="para">
+                        <strong>“Do you feel you don’t have much to offer? You have the most precious resource of all: the ability to save a life by donating blood! Help share this invaluable gift with someone in need.”</strong>
+                    </p>
+                </div>
+                <div class="col-12 col-lg-7 ">
+                    <div class="card ">
+                        <div class="card-header bg-danger text-white ">
+                            <h2 class="text-center ">
+                                <strong>
+                                    Login
+                                </strong>
+                            </h2>
+                        </div>
+                        <div class="card-body ">
+                            <div class="form-group ">
+                                <div class="form-group row ">
+                                    <div class="col-6 col-sm-3 ">
+                                        <label for="EmailId ">Email_Id</label>
+                                    </div>
+                                    <div class="col-6 col-sm-3 ">
+                                        <input type="text " placeholder="Enter Email Id ">
+                                    </div>
+                                </div>
+                                <div class="form-group row ">
+                                    <div class="col-6 col-sm-3 ">
+                                        <label for="Password ">Password</label>
+                                    </div>
+                                    <div class="col-6 col-sm-3 ">
+                                        <input type="password " placeholder="Enter Password ">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row ">
+                                    <div class="justify-content-center ">
+                                        <button type="submit " class="btn btn-danger ">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-left mb-n3 ml-n3 ">
+                                <a href="# " style="color:rgb(202, 86, 86) "> Forgot Passoword ? </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="Egb">
+        <div class=" container bg-white text-center" style="margin-top: 1rem;">
+            <h2 class="text-center">Eligibility by Donation Type</h2>
+            <p style="font-weight: bold;">To ensure the safety of both patients and donors, these are some of the requirements donors must meet to be eligible to donate blood based on their donation type.
+            </p>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./imG/p1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Whole Blood Donation</h5>
+                            <ul class="card-text">
+                                <li> Donation frequency: Every 56 days*</li>
+                                <li>You must be in good health and feeling well**</li>
+                                <li>You must weigh at least 110 lbs</li>
+                                <li>You must be at least 16 years old in most states</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./imG/p2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Power Red Donation</h5>
+                            <ul class="card-text">
+                                <li>Donation frequency: Every 112 days, up to 3 times/year*</li>
+                                <li>Male donors must be at least 17 years old and at least 5'1" tall and weigh at least 130 lbs</li>
+                                <li>Female donors must be at least 19 years old, at least 5'5" and weigh at least 150 lbs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width:18rem;">
+                        <img class="card-img-top" src="./imG/p3.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Platelet Donation</h5>
+                            <ul class="card-text">
+                                <li> Donation frequency: Every 7 days, up to 24 times/year*</li>
+                                <li>You must be in good health and feeling well**</li>
+                                <li>You must be at least 17 years old in most states </li>
+                                <li>You must weigh at least 110 lbs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="bloodfc">
+        <div class="bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+                        <img src="./imG/bf1.jpg" alt="blood fact" class="img-thumbnail">
+                    </div>
+                    <div class="col-8">
+                        <ul style="list-style: square;">
+                            <li>A total of 30 million blood components are transfused each year.</li>
+                            <li>The blood type most often requested by hospitals is Type O</li>
+                            <li>A single car accident victim can require as many as 100 units of blood</li>
+                            <li>Every two seconds someone needs blood</li>
+                            <li>The average red blood cell transfusion is approximately 3 pints.</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-4 order-last">
+                        <img src="./imG/bf3.jpg" alt="blood fact" class="img-thumbnail">
+                    </div>
+                    <div class="col-8">
+                        <ul style="list-style: square;">
+                            <li>A total of 30 million blood components are transfused each year.</li>
+                            <li>The blood type most often requested by hospitals is Type O</li>
+                            <li>A single car accident victim can require as many as 100 units of blood</li>
+                            <li>Every two seconds someone needs blood</li>
+                            <li>The average red blood cell transfusion is approximately 3 pints.</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="./imG/bf2.jpg" alt="blood fact" class="img-thumbnail" style="margin-top: 5rem;">
+                    </div>
+                    <div class="col-8">
+                        <ul style="list-style: square;">
+                            <li>All donated blood is tested for HIV, hepatitis B and C, syphilis and other infectious diseases before it can be transfused to patients.</li>
+                            <li>The actual blood donation typically takes less than 10-12 minutes. The entire process, from the time you arrive to the time you leave, takes about an hour and 15 min. The average adult has about 10 units of blood in his body.
+                                Roughly 1 unit is given during a donation.</li>
+                            <li>Every two seconds someone needs blood</li>
+                            <li>Every blood donor is given a mini-physical, checking the donor's temperature, blood pressure, pulse and hemoglobin to ensure it is safe for the donor to give blood</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <hr>
+    <section id="About">
+        <div class="container" style="margin-top: 8rem;">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./imG/ab1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./imG/ab2.png" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="./imG/ab3.jpg" alt="Card image cap">
+                        <div class=" card-body ">
+                            <h5 class="card-title ">Card title</h5>
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+    <footer>
+        <div class="container">
+            <hr>
+            <p class="text-center"> Copyright. If your footer had just one element, this might be it. ... Sitemap. This is the most common link found in footers which links to the HTML version of the sitemap. ... Privacy Policy</p>
+            <div class="mr-auto text-center" style="padding: 3rem 3rem ; ">
+
+                <a href=" " class="mr-4 "><span class="fa fa-envelope fa-lg "></span></a><a href=" " class="mr-4 "><span class="fab fa-facebook fa-lg "></span></a>
+                <a href=" " class="mr-4 "><span class="fab fa-instagram fa-lg "></span></a>
+                <a href=" " class="mr-4 "><span class="fab fa-twitter-square fa-lg"></span></a>
+                <a href=" " class="mr-4 "><span class="fab fa-github fa-lg "></span></a>
+            </div>
+    </footer>
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script type="text/javascript " src="./Js/Js.js "></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js " integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin=" anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js " integrity="sha512-I1SRWCuHnqVwlUXfm2TNMDduALHE1LfFpbQtFPY2z33Jy0iJAEXBDgrRrBLbpVChGclfCB0Hfy0F8wLVJtIVPQ==" crossorigin=" anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+</body>
+
+
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script type="text/javascript " src="./Js/Js.js "></script>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js " integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin=" anonymous "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js " integrity="sha512-I1SRWCuHnqVwlUXfm2TNMDduALHE1LfFpbQtFPY2z33Jy0iJAEXBDgrRrBLbpVChGclfCB0Hfy0F8wLVJtIVPQ==" crossorigin=" anonymous "></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+</body>
+
+</html>
